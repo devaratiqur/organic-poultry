@@ -1,0 +1,167 @@
+/* @@@@@@@@@@@@@  Banner Section Start Here  @@@@@@@@@@@@@@ */
+.banner {
+    @extend %rel;
+    @extend %hidden;
+    .swiper-pagination{
+        bottom: 30px !important;
+    }
+    .banner-slider {
+        .swiper-pagination-bullet{
+            width: 15px;
+            height: 15px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            opacity: 1;
+            background: transparent;
+            border: 2px solid $white-color;
+        }
+        .swiper-pagination-bullet-active {
+            width: 15px;
+            height: 15px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            opacity: 1;
+            background: $theme-color;
+            border: 2px solid $theme-color;
+        }
+    }
+    .banner-slider-part {
+        background-size: cover !important;
+        background-position: top left !important;
+        @include breakpoint(lg) {
+            background-position: center !important;
+        }
+        .banner-content {
+            padding: 180px 0 100px;
+            text-align: center;
+            @include breakpoint(lg){
+                padding: 203px 0;
+            }
+            h1 {
+                color: $white-color;
+                max-width: 900px;
+                margin: 0 auto;
+                font-weight: 400;
+                b, strong {
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                }
+                @include breakpoint(max-md){
+                    font-size: 46px;
+                }
+                @include breakpoint(max-sm) {
+                    font-size: 36px;
+                }
+                
+            }
+            .bt-thumb {
+                @include transform(translateY(-350px));
+                @include transition(all .6s ease);
+            }
+            .banner-title {
+                @include transform(translateY(-350px));
+                @include transition(all .6s ease);
+            }
+            .banner-desc {
+                @include transform(translateY(350px));
+                @include transition(all .7s ease);
+            }
+            .lab-btn {
+                margin-top: 24px;
+                @include transform(translateY(350px));
+                @include transition(all .9s ease);
+                @include breakpoint(md){
+                    margin-top: 30px;
+                }
+                @include breakpoint(lg){
+                    margin-top: 40px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+    .swiper-slide-active {
+        .banner-thumb {
+            opacity: 1;
+        }
+        .banner-slider-part {
+            .banner-content {
+                .bt-thumb {
+                    @include transform(translateY(0px));
+                }
+                .banner-title {
+                    @include transform(translateY(0px));
+                }
+                .banner-desc {
+                    @include transform(translateY(0px));
+                }
+                .lab-btn {
+                    @include transform(translateY(0px));
+                }
+            }
+        }
+    }
+    &.home-2 {
+        .banner-slider-part {
+            .banner-content {
+                padding: 180px 0 100px;
+                text-align: center;
+                h3 {
+                    font-weight: 400;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+/* @@@@@@@@@@@@@  Page Header Section Start Here  @@@@@@@@@@@@@@ */
+.page-header {
+    @extend %rel;
+    margin-top: 82px;
+    background: url(../../assets/images/bg-images/page-header.jpg);
+    @include breakpoint(xl) {
+        margin-top: 0;
+    }
+    .page-header-content-area {
+        @extend %rel;
+        z-index: 1;
+        margin-bottom: 15px;
+        .ph-title {
+            text-align: center;
+            color: $white-color;
+        }
+        ul {
+            @extend %flex;
+            justify-content: center;
+            li {
+                padding-right: 15px;
+                &:last-child {
+                    padding-right: 0;
+                }
+                a {
+                    @extend %rel;
+                    color: $white-color;
+                    &::after {
+                        @extend %abs;
+                        width: 1px;
+                        height: 15px;
+                        top: 4px;
+                        right: -9px;
+                        background: $white-color;
+                        transform: rotate(20deg);
+                    }
+                    &.active {
+                        color: $theme-color;
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

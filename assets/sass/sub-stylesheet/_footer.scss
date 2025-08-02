@@ -1,0 +1,122 @@
+/* @@@@@@@@@@@@@  Footer Section Start Here  @@@@@@@@@@@@@@ */
+.footer-top {
+    .col-lg-3.col-md-6 {
+        &:last-child {
+            .post-item {
+                @include breakpoint(max-md) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .post-item {
+        @include breakpoint(max-xl) {
+            margin-bottom: 50px;
+        }
+        .footer-logo {
+            @include transform(translateY(-20px));
+        }
+        .footer-location {
+            li {
+                @extend %flex;
+                padding: 8px 0;
+                .icon-part {
+                    width: 30px;
+                    i {
+                        padding-top: 10px;
+                        color: $theme-color;
+                    }
+                }
+                .content-part {
+                    width: calc(100% - 30px);
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .post-title {
+            margin: 0px 0px 30px;
+        }
+        .footer-post {
+            .media {
+                border-bottom: 1px solid $border-color;
+                &:last-child {
+                    border-bottom: none;
+                }
+                &:hover {
+                    .fp-thumb {
+                        img {
+                            @include transform(scale(1.05));
+                        }
+                    }
+                }
+                .fp-thumb {
+                    width: 90px;
+                    height: 90px;
+                    line-height: 90px;
+                    text-align: center;
+                    @include border-radius(3px);
+                    @extend %hidden;
+                    img {
+                        width: 100%;
+                        @include transition($transition);
+                    }
+                }
+                .media-body {
+                    h6 {
+                        font-size: $fs-base;
+                        &:hover {
+                            color: $theme-color;
+                        }
+                    }
+                    .rating {
+                        font-size: 12px;
+                        margin-bottom: 5px;
+                        i {
+                            color: $theme-color;
+                        }
+                        span {
+                            color: $desc-color;
+                        }
+                    }
+                    .price {
+                        color: $title-color;
+                        display: block;
+                    }
+                }
+            }
+        }
+        .footer-gellary {
+            .figure {
+                margin: 3px;
+                @extend %hidden;
+                &:hover {
+                    img {
+                        @include transform(scale(1.05));
+                    }
+                }
+                a {
+                    display: block;
+                    img {
+                        display: block;
+                        width: 80px;
+                        @include transition($transition);
+                    }
+                }
+            }
+        }
+    }
+}
+.footer-bottom {
+    padding: 27px 0;
+    p {
+        margin-bottom: 0;
+        font-weight: 600;
+        color: $title-color;
+        a {
+            color: $theme-color;
+            margin: 0 5px;
+        }
+    }
+}

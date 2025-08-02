@@ -1,0 +1,65 @@
+/*Gallery-1 (Grid)*/
+.gallery-img-wrapper{
+   display: grid;
+   grid-template-columns: repeat(1,1fr);
+   -ms-grid-columns: 1fr;
+   @include breakpoint(md){
+      grid-template-columns: repeat(2,1fr);
+      -ms-grid-columns: 1fr 1fr;
+   }
+   grid-gap:20px;
+   .gallery-img{
+      width: 100%;
+      overflow: hidden;
+      &:hover{
+         img{
+            transform: scale(1.1);
+         }
+      }
+      img{
+         @include transition(.5s ease);
+         @include breakpoint(max-sm){
+            border-radius: 5px;
+         }
+      }
+   }
+}
+/*Gallery-2 (Masonry)*/
+.gallery-grid-item{
+   display: grid;
+   grid-gap: 15px;
+   grid-template-columns: auto;
+   @include breakpoint(sm) {
+      grid-template-columns: auto auto;
+   }
+   @include breakpoint(md) {
+      grid-template-columns: auto auto auto;
+   }
+   @include breakpoint(lg) {
+      grid-template-columns: auto auto auto auto;
+   }
+   .grid-items{
+      overflow: hidden;
+      img{
+         max-width: 100%;
+         transform: scale(1);
+         transition: .5s;
+         &:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+         }
+      }
+      &:nth-child(2) {
+         grid-row-start: span 2;
+      }
+      &:nth-child(4) {
+         grid-row-start: span 2;
+      }
+      &:nth-child(7) {
+         grid-row-start: span 2;
+      }
+      &:nth-child(9) {
+         grid-row-start: span 2;
+      }
+   }
+}

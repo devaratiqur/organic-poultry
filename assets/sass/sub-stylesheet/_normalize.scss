@@ -1,0 +1,91 @@
+/*! @@@@@@@@@@@@@@@@@@@@@@
+Template Name: poultry-farm
+Template URI: https://themeforest.net/user/labartisan
+Author: LabArtisan
+Author URI: https://themeforest.net/user/labartisan
+Description: Description
+Version: 1.0.0
+Text Domain: poultry-farm
+Tags: bootstrap, Butcher, butcher shop, chicken, ecommerce, fish, meat, meat shop, mutton, online meat shop, products, restaurant, retail, Sea Food
+
+@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* @@@@@@@@@@@@@@@@@@@@@@
+>>> TABLE OF CONTENTS START:
+
+01. Normalize CSS
+02. Global CSS
+03. Header
+	* Mobile Menu
+04. Banner 
+05. Page Header
+06. About Section
+07. product-category-section
+08. product-section
+09. counterup-section
+10. Video-section
+11. contact-section
+12. faq-section
+13. newsletter-section
+14. Sponsor Section
+15. testimonial-section
+16. team-section
+17. gallery-section
+18. history-section
+19. Fore Zero
+20. Blog
+	* Blog Single
+21. Widget
+22. Shop Page
+  * Shop Single
+  * cart Page
+
+
+
+>>> TABLE OF CONTENTS END:
+@@@@@@@@@@@@@@@@@@@@@@ */
+
+* {margin: 0;padding: 0;box-sizing: border-box; outline: none; box-shadow: none;}
+
+body {background: $white-color;color: $desc-color;font-family: $roboto;font-size: $fs-base;line-height: 1.5;}
+
+h1, h2, h3, h4, h5, h6 {color: $title-color; font-weight: 700;}
+a>h1, a>h2, a>h3, a>h4, a>h5, a>h6 {@include transition($transition);}
+h1 {font-size: $fs-h1;}
+
+h2 {font-size: $fs-h2;}
+
+h3 {font-size: $fs-h3;}
+
+h4 {font-size:$fs-h4;}
+
+h5 {font-size: $fs-h5;margin-top: -5px;}
+h6 {font-size: $fs-h6;}
+
+p {margin-bottom: 15px;font-weight: 400;font-size: $fs-base;color: $desc-color;line-height: 24px;}
+
+a {color: $title-color;@include transition($transition); display: inline-block;}
+
+a:hover, a:focus, a:active, a:visited {color: $title-color;text-decoration: none;outline: none;}
+
+img {height: auto;max-width: 100%;}
+
+@include breakpoint(sm) {
+	h1 {font-size: $fs-h1;}
+	
+	h2{font-size: $fs-h2;}
+	
+	h3 {font-size: $fs-h3;}
+	
+	h4 {font-size:$fs-h4;}
+	
+	h5 {font-size: $fs-h5;}
+	
+	h6 {font-size: $fs-h6;}
+}
+.lab-ul {
+	margin: 0;
+	li {
+		list-style: none;
+	}
+}

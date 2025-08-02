@@ -1,0 +1,57 @@
+$bootstrap-sass-asset-helper: false !default;
+//
+// Variables
+// --------------------------------------------------
+
+
+// Colors
+
+$title-color: #181818;
+$desc-color: #716c80;
+$theme-color: #fe964d;
+$border-color: #f0f0f0;
+$white-color: #fff;
+$ash-color: #fff7f1;
+$bg-dark: #0f1b28;
+
+// social-media color
+$facebook: #3b5998;
+$twitter: #55acee;
+$linkedin: #007bb5;
+$skype: #2fb7df;
+$youtube: #cd201f;
+$google: #dd4b39;
+$camera: #e4405f;
+$instagram: #e4405f;
+$tumblr: #34465d;
+$behance: #1769ff;
+$star: #e9ba17;
+$green: #0be881;
+$green-h: #0fbcf9;
+$red: #f53b57;
+$yellow: #dec32b;
+$nell: #212fb4;
+$navy: #d8e0f3;
+$plaseholder: #a0a6bc;
+$pinterest : #bd081c;
+$basketball : #e94c89;
+$vimeo : #3b5998 ;
+//== Typography
+
+// font-family
+$roboto:  'Roboto', sans-serif;
+
+// font-size
+$fs-base:   16px !default;
+$fs-h1:	60px;
+$fs-h2: 	40px;	
+$fs-h3: 	36px;		
+$fs-h4: 	30px;		
+$fs-h5: 	24px;		
+$fs-h6: 	20px;		
+
+// Description line height
+$lh-p:		28px;
+
+//  transition
+$transition: all 0.3s ease;

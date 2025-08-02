@@ -1,0 +1,177 @@
+// Header Section Start here
+.header-section {
+    @include breakpoint(max-xl) {
+        display: none;
+    }
+    .header-area.menu-fixed {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 99;
+        background: $theme-color;
+        box-shadow: 0 0 3px rgba(81, 136, 136, .10);
+        .primary-menu .main-area .main-menu .logo {
+            display: block;
+        }
+    }
+    .primary-menu {
+        @extend %flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            a {
+                display: block;
+                img {
+                    display: block;
+                }
+            }
+        }
+        .main-area {
+            @extend %flex;
+            align-items: center;
+            .main-menu {
+                .logo {
+                    display: none;
+                }
+                ul {
+                    @extend %flex;
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        padding: 0;
+                        &.active, &:hover {
+                            > a {
+                                color: $white-color;
+                            }
+                        }
+                        a {
+                            padding: 23px 20px;
+                            color: $white-color;
+                            font-size: $fs-base;
+                            font-weight: 700;
+                            @include transition($transition);
+                        }
+                        ul {
+                            @extend %abs;
+                            min-width: 200px;
+                            background: $theme-color;
+                            box-shadow: 0 0 5px rgba(136, 136, 136, .10);
+                            display: block;
+                            top: 100%;
+                            transform: scaleY(0);
+                            transform-origin: top;
+                            z-index: 999;
+                            @include transition($transition);
+                            li {
+                                &:nth-child(1) {
+                                    a {
+                                        @include breakpoint(xl) {
+                                            padding-left: 15px;
+                                        }
+                                    }
+                                }
+                                a {
+                                    font-size: 98%;
+                                    padding: 10px 15px;
+                                    color: $white-color;
+                                    width: 100%;
+                                    border-bottom: 1px solid $border-color;
+                                    &:hover, &.active {
+                                        padding-left: 20px;
+                                        color: $theme-color;
+                                        background: $white-color;
+                                    }
+                                }
+                                &:last-child {
+                                    a {
+                                        border-bottom: none;
+                                    }
+                                }
+                                &.menu-item-has-children {
+                                    margin-right: 0px;
+                                    a {
+                                        &::after {
+                                            right: 15px;
+                                            transform: translateY(-50%) rotate(-90deg);
+                                        }
+                                    }
+                                }
+                                ul {
+                                    left: 100%;
+                                    top: 0;
+                                }
+                            }
+                        }
+                        &.menu-item-has-children {
+                            margin-right: 16px;
+                            position: relative;
+                            >a {
+                                @extend %rel;
+                                &::after {
+                                    @extend %abs;
+                                    top: 50%;
+                                    right: 0;
+                                    transform: translateY(-50%);
+                                    font-weight: 400;
+                                    content: "\ea99" !important;
+                                    font-family: IcoFont !important;
+                                }
+                            }
+                        }
+                        &:hover{
+                            >ul {
+                                transform: scaleY(1);
+                            }
+                        }
+                    }
+                }
+            }
+            .header-btn {
+                margin-left: 15px;
+                .lab-btn {
+                    display: block;
+                    padding: 13px 30px;
+                }
+            }
+        }
+    }
+    .header-top {
+        padding: 5px 0;
+        .ht-left {
+            ul {
+                li {
+                    color: #2b3539;
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding-right: 15px;
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+        &.bg-black {
+            background: $title-color;
+        }
+    }
+}
+
+.transparent-header {
+    @extend %abs;
+    width: 100%;
+    top: 20px;
+    z-index: 999;
+    .primary-menu .main-area .main-menu ul li a {
+        color: $white-color;
+    }
+    .primary-menu .main-area .main-menu ul li ul {
+        background: $theme-color;
+    }
+    .search-cart li {
+        color: $white-color;
+        border-color: $white-color;
+    }
+}
+.transparent-header .header-area.menu-fixed {
+    background: $title-color;
+}
